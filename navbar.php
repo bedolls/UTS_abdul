@@ -7,10 +7,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/is62/PROJECT/index.php">Beranda</a>
+          <a class="nav-link active" aria-current="page" href="/UTS_abdul/index.php">Beranda</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/proyekabdul/modul-jurusan/index.php">Data Jurusan</a>
+          <a class="nav-link active" aria-current="page" href="/UTS_abdul/modul_event/index.php">Data Jurusan</a>
         </li>  
       </ul>
       <form class="d-flex" role="search">
