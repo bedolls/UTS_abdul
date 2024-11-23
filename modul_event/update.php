@@ -8,7 +8,7 @@ $lk = $_POST['lokasi'];
 $tgl = $_POST['tanggal'];
 $jml = $_POST['jumlah_peserta'];
 #3. menulis query
-$sunting = "UPDATE jurusans SET kode='$kd', jurusan='$jrs' WHERE id='$id'";
+$sunting = "UPDATE tbl_event SET nama_event='$ne', lokasi='$lk', tanggal='$tgl', jumlah_peserta='$jml'  WHERE id='$id'";
 #4. jalankan query
 $proses = mysqli_query($koneksi, $sunting);
 #5. mengalihkan halaman
