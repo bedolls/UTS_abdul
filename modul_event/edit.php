@@ -4,7 +4,7 @@ include("../koneksi.php");
 #2. ambil id yang akan disunting
 $id = $_GET['id'];
 #3. mengambil semua record data berdasarkan id yang dipilih
-$ambil = "SELECT * FROM jurusans WHERE id='$id'";
+$ambil = "SELECT * FROM tbl_event WHERE id_event='$id'";
 #4. menjalankan query
 $edit = mysqli_query($koneksi,$ambil);
 #5. memisahkan record data berdasarkan kolom/field
@@ -33,10 +33,10 @@ $data = mysqli_fetch_array($edit)
             </div>
             <div class="card-body">
             <form action="update.php" method="post">
-                <input type="hidden" name="id" value="<?=$data['id']?>">
+                <input type="hidden" name="id" value="<?=$data['id_event']?>">
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Nama Event</label>
-                    <input type="text" readonly value="<?=$data['nama_event']?>" name="nama_event" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="text" value="<?=$data['nama_event']?>" name="nama_event" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputPassword1" class="form-label">Lokasi</label>
