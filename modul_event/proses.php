@@ -8,7 +8,7 @@ $lk = $_POST['lokasi'];
 $tgl = $_POST['tanggal'];
 $jml = $_POST['jumlah_peserta'];
 #3. menulis query
-$simpan = "INSERT INTO tbl_event (nama_event,lokasi,tanggal,jumlah_peserta) VALUES ('$ne','$lk','$tgl','$jml',)";
+$simpan = "INSERT INTO tbl_event (nama_event,lokasi,tanggal,jumlah_peserta) VALUES ('$ne','$lk','$tgl','$jml')";
 
 #4. jalankan query
 $proses = mysqli_query($koneksi, $simpan);
