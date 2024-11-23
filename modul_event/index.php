@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Data Jurusan</title>
+    <title>Data Event</title>
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/all.css">
 </head>
@@ -17,7 +17,7 @@
         <div class="col-8 m-auto">
             <div class="card">
             <div class="card-header">
-                <h3 class="float-start">Data Jurusan</h3>
+                <h3 class="float-start">Data Event</h3>
                 <span class="float-end"><a class="btn btn-primary" href="form.php"><i class="fa-solid fa-square-plus"></i> Tambah Data</a></span>
             </div>
             <div class="card-body">
@@ -25,8 +25,10 @@
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Kode</th>
-                        <th scope="col">Nama Jurusan</th>
+                        <th scope="col">Nama event</th>
+                        <th scope="col">Lokasi</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Jumlah peserta</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -36,7 +38,7 @@
                     include("../koneksi.php");
 
                     #2. menulis query
-                    $tampil = "SELECT * FROM jurusans";
+                    $tampil = "SELECT * FROM tbl_event";
 
                     #3. jalankan query
                     $proses = mysqli_query($koneksi, $tampil);
@@ -47,8 +49,10 @@
                     ?>
                     <tr>
                         <th scope="row"><?=$nomor++?></th>
-                        <td><?=$data['kode']?></td>
-                        <td><?=$data['jurusan']?></td>
+                        <td><?=$data['nama_event']?></td>
+                        <td><?=$data['lokasi']?></td>
+                        <td><?=$data['tanggal']?></td>
+                        <td><?=$data['jumlah_peserta']?></td>
                         <td>
                         <a class="btn btn-info btn-sm" href="edit.php?id=<?=$data['id']?>"><i class="fa fa-pen-to-square"></i></a>
                             
